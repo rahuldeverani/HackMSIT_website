@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <title>Document</title>
+
+</head>
+<body>
+   
+<h1 style="text-align: center">Admin page</h1>
+<h3 style="text-align: center">List of all teams</h3>
+<% var e=1 %>
+
+<% all.forEach(function(team){ %>
+    
+    
+
+            <% if(team.name!=null){ %>
+                
+                <div class="card-deck col-lg-8" style="width: 50%; align:text-center ; margin: auto;margin-bottom: 40px " >
+                        <div class="card bg-success">
+                          <div class="card-body text-center">
+                               
+                                <p>
+
+                                        <h4>Team No-<%= e %></h4>
+                                        <% e++ %>
+                                    <h4>team name - <%= team.name %></h4>
+                                    <h4>Team leader email-<%= team.email %></h4>
+                                <h6>Participants</h2>
+                                <h6>name- <%= team.one.name %> ,year- <%= team.one.year %> ,branch- <%= team.one.branch %> </h6>
+                                <h6>name- <%= team.two.name %>,year- <%= team.one.year %>,branch- <%= team.one.branch %> </h6>
+                                <h6>name- <%= team.three.name %>,year- <%= team.three.year %>,branch- <%= team.three.branch %> </h6>
+                                <h6>name- <%= team.four.name %>,year- <%= team.four.year %>,branch- <%= team.four.branch %> </h6>
+                                <h6>Idea for hackathon-<%= team.idea %></h6></p>
+                              </div>
+                            </div>
+                            
+                            
+                          </div>
+            <% } %>
+         
+
+                      
+                  
+                
+
+
+
+<% }) %>
+
+
+</body>
